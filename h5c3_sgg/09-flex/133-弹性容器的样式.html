@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+ /*  
+flex-direction
+    指定容器中弹性元素的排列方向
+  可选值:
+    row             默认值，弹性元素在容器中水平排列(左向右)
+    row-reverse     弹性元素在容器中水平排列(右向左)
+    column          弹性元素在容器中纵向排列(上向下)
+    column-reverse  弹性元素在容器中纵向排列(下向上)
+
+flex-wrap（当flex-grow和flex-shrink都设置为0时)
+    设置弹性元素是否在弹性容器中自动换行
+  可选值：
+    nowrap       默认值，元素不会自动换行
+    wrap         元素沿着侧轴方向自动换行
+    wrap-reverse 元素沿着侧轴反方向换行
+
+flex-flow
+    flex-direction 和 flex-wrap 的简写属性
+    flex-flow: row wrap;   
+
+justify-content
+    主轴上的元素如何排列（主轴上的空白分配）
+  可选值：
+    flex-start  元素沿着主轴起边排列
+    flex-end    元素沿着主轴终边排列
+    center      元素居中排列
+    space-around  空白均匀分布到每个元素两侧
+    space-evenly  空白均匀分配到元素单侧
+    space-between 空白均匀分配到元素中间(两边贴边)
+
+align-content
+    侧轴上的空白分配(每一列的空白分配)
+  可选值:   同 justify-content
+
+align-items
+    元素在侧轴上如何对齐(假设每个弹性元素都还有子元素，且弹性元素换行了)
+  可选值：
+    stretch    默认值，将每一行元素的长度设置为相同的值
+    flex-start 元素不会拉伸，沿着侧轴起边对齐
+    flex-end   元素不会拉伸，沿着侧轴终边对齐
+    center     在侧轴方向上居中对齐
+    baseline   基线对齐
+
+align-self
+    用来覆盖当前弹性元素上的 align-items
+
+*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul {
+            width: 500px;
+            border: 10px red solid;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-flow: row wrap; */
+        }
+
+        li {
+            width: 200px;
+            height: 100px;
+            background-color: #bfa;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        li:nth-child(2) {
+            background-color: pink;
+        }
+
+        li:nth-child(3) {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+</body>
+
+</html>

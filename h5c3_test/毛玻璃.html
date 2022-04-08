@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>毛玻璃效果</title>
+</head>
+
+<body>
+  <div class="background">
+    <div class="background-content">
+      <div class="background-content-image">
+      </div>
+      <img src="https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp">
+    </div>
+  </div>
+</body>
+
+</html>
+<style>
+  .background{
+    width: 260px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .background-content{
+    width: 260px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .background-content-image{
+    position: absolute;
+    z-index: -1;
+    width: 260px;
+    height: 100%;
+    filter: blur(8px);
+    background: url(https://gw.alipayobjects.com/zos/antfincdn/LlvErxo8H9/photo-1503185912284-5271ff81b9a8.webp) 100% center no-repeat;
+  }
+  img{
+    max-height: 100%;
+  }
+</style>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<style>
+/* 
+    样式继承：
+        我们为一个元素设置的样式会被应用到它的后代元素上
+        继承是发生在祖先元素和后代元素之间的
+        继承的设计是为了方便我们的开发，
+            利用继承可以将一些通用样式统一设置到共同的祖先元素上
+        并不是所有的样式都会被继承，
+            比如背景相关、布局相关等这些样式都不会被继承
+*/
+    p{
+        color:red;
+    }
+</style>
+</head>
+<body>
+    <p>
+        我是p元素
+        <span>我是p元素中的span</span>
+    </p>
+    <span>我是p元素外的span</span>
+
+    <div>
+        我是div
+
+    </div>
+
+</body>
+</html>

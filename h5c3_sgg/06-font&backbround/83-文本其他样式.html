@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            font-size: 50px;
+
+            /* 
+            text-decoration 设置文本修饰
+                可选值:
+                    none 
+                    underline  下划线
+                    over-line 上划线
+                    line-through  删除线
+                        red ie不支持
+
+             */
+            text-decoration: underline red; 
+        }
+
+        .box2{
+            
+            /* 
+            white-space  设置网页如何处理空白
+                可选值:
+                    normal 正常，换行
+                    nowrap 不换行，出现滚动条
+                    pre 保留空白
+
+             */
+            
+            /* 实现文本不换行、溢出裁剪、溢出部分用省略号 */
+            width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        今天天气真不错
+    </div>
+
+    <div class="box2">
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi omnis rerum eum obcaecati possimus velit consectetur error cumque aperiam temporibus, repellat adipisci corrupti aliquam maiores dicta eius, quidem voluptatibus mollitia.
+    </div>
+</body>
+</html>

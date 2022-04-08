@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="fa/css/all.css">
+    <style>
+        body{
+            background-color: #bfa;
+        }
+        .todolist{
+            width: 300px;
+            margin: 30px auto;
+            background-color: white;
+        }
+        .text-input{
+            width: 200px;
+            height: 30px;
+            border: 1px solid #bcbcbc;
+        }
+        button.add{
+            width: 93px;
+            height: 34px;
+            background-color: #efefef;
+            border: 1px solid #bcbcbc;
+        }
+
+        li{
+            font:normal normal 13px/3 微软雅黑,'Times New Roman', Times, serif;
+            border-bottom: 1px #bcbcbc solid;
+        }
+        li span{
+            margin-left: 10px;
+        }
+        li img{
+            width: 18px;
+
+        }
+        
+        button{
+            font-size: 14px;
+            border:none;
+        }
+        
+        button.delete{
+            margin-left: 220px;
+            background-color: white;
+        }
+
+        .buttom-warpper{
+            height: 30px;
+            font-size: 22px;
+        }
+
+        .buttom-warpper button{
+            float: left;
+            padding: 6.5px 15px;
+            background-color: white;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="todolist">
+        <div class="top-input">
+            <input type="text" class="text-input"><button class="add">Add Todo</button>
+        </div>
+        <ul class="list">
+            <li>
+                <span class="text">事件1</span>
+                <button class="delete">
+                    <img src="./img/delete2.jpg" alt="">
+                </button>
+            </li>
+            
+            <li>
+                <span class="text">事件2</span>
+                <button class="delete">
+                    <img src="./img/delete2.jpg" alt="">
+                </button>
+            </li>
+            <li>
+                <span class="text">事件3</span>
+                <button class="delete">
+                    <img src="./img/delete2.jpg" alt="">
+                </button>
+            </li>
+            <li>
+                <span class="text">事件4</span>
+                <button class="delete">
+                    <img src="./img/delete2.jpg" alt="">
+                </button>
+            </li>
+            <li>
+                <span class="text">事件5</span>
+                <button class="delete">
+                    <img src="./img/delete2.jpg" alt="">
+                </button>
+            </li>
+        </ul>
+        <div class="buttom-warpper">
+            <button class="buttom-button">
+                <span>All</span>
+            </button>
+            <button class="buttom-button">
+                <span>Completed</span>
+            </button>
+            <button class="buttom-button">
+                <span>Active</span>
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>

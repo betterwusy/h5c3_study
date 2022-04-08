@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        a:link{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background-image: url(./img/08/btn.png);
+
+        }
+        a:hover{
+            background-position: -93px 0px;
+
+        }
+        a:active{
+            background-position: -186px 0px;
+        }
+
+        /* 
+
+        图片属于网页中的外部资源，外部资源都需要浏览器单独发送请求加载
+            浏览器加载外部资源时是按需加载的
+            link会首先加载，而hover和active会在指定状态触发时才会加载
+
+        《解决图片闪烁的问题》
+            可以将多个小图片统一保存到一个大图片中，然后通过调整background-pisition来切换图片显示的位置。
+            这样图片就会同时加载到网页中就可以有效的避免出现闪烁的问题
+            这个技巧在网页中使用十分广泛，被称为CSS-Sprite，称为雪碧图/精灵图
+
+        步骤：
+            1.先确定要使用的图标
+            2.测量图标的大小
+            3.根据测量结果创建一个元素
+            4.将雪碧图设置为元素的背景图片
+            5.设置一个偏移量以显示正确的图片
+        
+        雪碧图特点：
+            一次性将多个图片加载进页面，降低请求的次数，加快访问速度，提升用户的体验
+        
+        */
+        .box1{
+            height: 24px;
+            width: 114px;
+            background-image: url('./img/09/amazon-sprite_.png');
+            background-position: -10px -289px;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;"></a>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

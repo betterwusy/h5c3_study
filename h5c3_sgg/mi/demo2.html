@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>小米logo浮动效果</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 设置中间的header */
+        .header {
+            height: 100px;
+            background-color: #bfa;
+        }
+
+        .header .logo{
+            float: left;
+            height: 55px;
+            width: 55px;
+            /* background-color: orange; */
+            margin-top: 22.5px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header .logo a{
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            background-color: orange;
+            background-image: url(./img/mi.png);
+            background-size: 55px 55px;
+            background-position: center;
+            transition: left 0.3s;
+            
+        }
+
+        .header .logo .home{
+            background-image: url(./img/home.png);
+            left: -55px;
+            top: 0;
+        }
+
+        .header .logo .mi{
+            left: 0;
+        }
+
+        .header .logo:hover .mi{
+            left: 55px;
+        }
+
+        .header .logo:hover .home{
+            left: 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header w clearfix">
+            <h1 class="logo">
+                <a class="home" href="javascript:;"></a>
+                <a class="mi" href="javascript:;"></a>
+            </h1>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

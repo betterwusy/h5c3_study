@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        html{
+            /* 设置当前网页的视距为800px */
+            perspective: 800px;
+        }
+        body{
+            background-color: rgb(240, 240, 240);
+            height: 1000px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 0 auto;
+            margin-top: 200px;
+    /* 
+        《变形》 transform
+         就是通过CSS来改变元素的形状或位置
+           - 不会影响到页面的布局(类似于相对定位)
+            transform 用来设置元素的变形效果
+                translateX()    沿着x轴方向平移
+                translateY()    沿着y轴方向平移
+                translateZ()    沿着z轴方向平移
+            transform: translateX(100px); 向右平移100px
+            transform: translateY(50%);   向下平移50%(相对于自己的高度)
+            transform: translateX(50%) translateY(50%);
+
+        要将元素居中:
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0; margin: auto;
+             - 这种居中方式，只适用元素大小确定时
+                若盒子大小不固定(即盒子height、width为auto)
+
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+             - 这种居中方式，不需要确定元素的大小
+
+            z轴平移，调整元素在z轴的位置
+                正常情况就是调整元素和人眼之间的距离，数据越大，元素离人越近
+            z轴平移属于立体效果(近大远小)，默认情况下页面是不支持透视的，如果需要看到效果必须要设置网页的视距
+                perspective: 800px;
+              transform: translateZ(100px);
+    */
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 0px auto; 
+        }
+        
+        .box3{
+            position: absolute;
+            background-color: silver;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        /* 使用平移实现块浮起来的效果 */
+        .box4,.box5{
+            background-color: #fff;
+            height: 300px;
+            width: 200px;
+            float: left;
+            margin: 0 20px;
+            /* 向上平移和阴影的过渡效果 */
+            transition: all .3s; 
+            
+        }
+
+        .box4:hover,.box5:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0,0,0,.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">aaabbbcccdddeee</div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+
+</body>
+</html>

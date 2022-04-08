@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* 
+        元素开启BFC 后的特点：！
+            1.开启BFC的元素不会被浮动元素所覆盖
+                元素开启BFC会排列在浮动元素右侧
+            2.开启BFC的元素子元素和父元素的外边距不会重叠
+                父元素开启BFC
+            3.开启BFC的元素可以包含浮动的子元素
+
+        开启 BFC 实例：
+          - 1.开启BFC的元素不会被浮动元素所覆盖
+           为下面的元素开启BFC ( overflow:hideen; )
+             使其不会被浮动元素覆盖，排列到前一浮动元素的右侧
+
+          - 2.开启BFC的元素子元素和父元素的外边距不会重叠
+            为父元素开启BFC ( overflow:hidden; )
+        
+         */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            float: left;
+            overflow: hidden;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            overflow: hidden;
+        }
+
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-top: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box3"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+</html>

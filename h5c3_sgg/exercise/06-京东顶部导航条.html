@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东顶部导航条</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <style>
+        
+        .cleartfix::before,
+        .cleartfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        body{
+            font: 12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+            
+        }
+
+        /* 设置外部容器样式 */
+        .top-bar-wrapper{
+            width: 100%;
+            height: 30px;
+            background-color: #e3e4e5;
+            line-height: 30px;
+            border-bottom:1px #ddd solid;
+        }
+
+        .top-bar{
+            width: 1190px;
+            margin: 0 auto;
+            
+        }
+
+        /* 设置字体样式 */
+        .top-bar a,
+        .top-bar span,
+        .top-bar i{
+            color: #999;
+            text-decoration: none;
+        }
+
+        .top-bar a:hover,
+        .top-bar .highlight{
+            color: #f10215;
+        }
+
+        .location{
+            float:left;
+        }
+
+        .location .fas{
+            font-size: 13px;
+            color: #f10215;
+        }
+
+        .location .city-list{
+            width: 320px;
+            height: 436px;
+            background-color:white;
+            border: 1px solid rgb(204,204,204); 
+            display: none;
+            position: absolute;
+            box-shadow: 0 2px 2px rgba(0,0,0,.2);
+        }
+
+        .location:hover  .city-list{
+            display: block;
+        }
+
+        .current-city{
+            padding: 0 10px;
+        }
+
+        .current-city:hover{
+            background-color: white;
+            outline: 1px solid rgb(204,204,204);
+            border-bottom: transparent;
+        }
+
+        .shortcut{
+            float:right;
+        }
+
+        .shortcut .line{
+            width: 1px;
+            height: 10px;
+            background-color: #999;
+            margin: 10px 12px;
+
+        }
+
+        .shortcut li{
+            float: left;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <!-- 外围容器 -->
+    <div class="top-bar-wrapper">
+        <!-- 内部容器 -->
+        <div class="top-bar cleartfix">
+            <!-- 左侧位置菜单 -->
+            <div class="location">
+                <div class="current-city">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="javascript:;">北京</a>
+                </div>
+                <div class="city-list"></div>
+            </div>
+
+            <!-- 右侧菜单 -->
+            <ul class="shortcut cleartfix">
+                <li>
+                    <a href="javascript:;">你好，请登录</a>
+                    <a class="highlight" href="javascript:;">免费注册</a>
+                </li>
+
+                <!-- 分割线 -->
+                <li class="line"></li>
+                <li><a href="javascript:;">我的订单</a></li>
+
+                <li class="line"></li>
+                <li>
+                    <a href="javascript:;">我的京东</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li><a href="javascript:;">京东会员</a></li>
+
+                <li class="line"></li>
+                <li>
+                    <a class="highlight" href="javascript:;">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li>
+                    <span>客户服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                
+                <li class="line"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+
+                <li class="line"></li>
+                <li><span>手机京东</span></li>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!-- 
+《鼠标悬浮下拉框》
+    1.hover应绑定给父元素，以达到鼠标下移下拉框不消失
+    2.下拉框设置绝对定位，使其浮动
+
+
+ -->

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+  容器的属性:
+    以下 6 个属性设置在容器上:
+      flex-direction
+      flex-wrap
+      flex-flow
+      justify-content
+      align-items
+      align-content
+
+    1. flex-direction
+      - flex-direction 属性定义了主轴的方向(即项目的排列方向)
+      - 可选值:
+        row     主轴在水平方向, 起点在左端(默认值)
+        column  主轴在垂直方向, 起点在上沿
+        row-reverse 主轴在水平方向, 起点在右端
+        column-reverse  主轴在垂直方向, 起点在下沿
+
+    2. flex-wrap
+      - 默认情况下，项目都排在一条线（又称"轴线"）上(不换行)。flex-wrap属性定义了如果一条轴线排不下，如何换行。
+      - 可选值:
+        nowrap  不换行, 子项过多的话元素会收缩(默认值)
+        wrap    换行, 第一行在上方(正常的换行)
+        warp-reverse 换行, 第一行在下方
+
+    3. flex-flow
+      - flex-flow 属性是 flex-direction 属性和 flex-wrap 属性的简写形式，默认值为 row nowrap。
+      - flex-flow: <flex-direction> || <flex-wrap>; (可以只写其中一个, 因为这俩值也互相不冲突~)
+
+    4. justify-content
+      - justify-conten 属性定义了项目在主轴上的对齐方式
+      - 可选值:
+        flex-start:     |||---- (默认值)
+        flex-end:       ----|||
+        center:         --|||--
+        space-between:  |--|--|
+        space-around:   -|--|--|-
+        space-evenly:   -|-|-|-
+
+    5. align-items
+      - align-items 属性定义项目在交叉轴上如何对齐
+      - 可选值:
+        flex-start: 交叉轴的起点对齐(默认值)
+        flex-end:   交叉轴的终点对齐
+        center:     交叉轴的中点对齐
+        baseline:   项目的第一行文字的基线对齐
+        stretch:    如果项目未设置高度或设为 auto, 将占满整个容器的高度
+
+    6. align-content(这个比较抽象)
+      - align-content 属性定义了多根轴线的对齐方式。
+          即flex容器中的子项不止一行时该属性才有效果。(或单行且flex-wrap:wrap)
+          它的作用是当flex容器在交叉轴上有多余的空间时, 对多条轴线进行处理。
+      - 可选值:
+        flex-start:     子项整体与交叉轴的起点对齐
+        flex-end:       子项整体与交叉轴的终点对齐
+        center:         子项整体与交叉轴的中点对齐
+        space-between:  子项拆分成多行,第一行、最后一行与交叉轴两边对齐,轴线之间的间隔平均分配
+        space-around:   子项拆分成多行,每一行两侧空间相等
+        stretch:        默认值, 子项拆分成多行,平均分配交叉轴方向的空间,且子项高度不固定时拉长占满该行的空间
+   -->
+   <div class="container">
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+     <div class="box"></div>
+   </div>
+</body>
+</html>
+<style>
+  .container{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+  .box{
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    border-color:hotpink;
+  }
+
+</style>

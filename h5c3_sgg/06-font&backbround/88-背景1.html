@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+
+            /* 
+            background-color 设置背景颜色
+            background-image 设置背景图片
+              background-img:url("./xxx.png")
+                - 如果图片尺寸小于元素，则图片会自动在元素中将元素铺满
+                - 如果图片尺寸大于元素，则图片会一部分无法完全显示
+                - 可以同时设置背景图片和背景颜色(背景图片覆盖背景颜色)
+
+            background-repeat 用来设置背景的重复方式
+                可选值:
+                    repeat 默认值，背景会沿着x轴 y轴双方向重复
+                    repeat-x 沿着x轴方向重复
+                    repeat-y 沿着y轴方向重复
+                    no-repeat 不重复
+                    
+            background-position  设置背景图片的位置
+                可选值：
+                  - top/bottom/center/left/right(必须两个值，若只有一个值则默认第二个是center)
+                  - npx npx; 通过偏移量(水平 垂直)来指定背景图片的位置
+
+             */
+
+            background-image: url(../../资料/图片/大黄猫/dahuangmao-01.png);
+            background-repeat: no-repeat;
+            background-position: 50px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+</body>
+</html>

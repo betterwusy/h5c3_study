@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <style>
+      /*
+    《动画》
+    动画和过渡类似，都是可以实现一些动态的效果
+        不同处是过渡需要在某个属性发生变化时才会触发，而动画可以自动触发动态效果
+
+步骤:
+    1. 关键帧:
+      设置动画效果，必须先设置一个关键帧，关键帧设置了动画执行的某一个步骤
+        @keyframes 关键帧名称{
+            from{
+
+            }
+            to{
+
+            }
+        }
+
+    2. 为元素添加动画
+        animation-name     要对当前元素生效的关键帧的名字
+        animation-duration 动画的执行时间
+        animation-delay    动画延时
+        animation-timing-function  动画执行时序
+        ……
+        animation-iteration-count  动画执行次数
+            infinite  无限执行
+
+        animation-direction 动画执行方向
+            normal 默认值:从from到to
+            reverse 从 to 到 from
+            alternate 交替的(从from头to，重复执行时反向)
+            alternate-reverse 反向交替的(从to到from，重复执行时反向)
+
+        animation-play-state  动画执行状态
+            running
+            pause
+
+        animation-fill-mode  动画填充模式
+            none      默认值，动画执行完毕元素回到原来位置
+            forwards  动画执行完毕元素停在结束位置
+            backwards 动画延时等待时，元素就会处于开始位置
+            both      结合以上两个特点
+
+*/
+      @keyframes test {
+        /* from 动画的开始位置，也可以使用 0% */
+        from {
+          margin-left: 0px;
+        }
+
+        /* to 动画的结束位置，也可以使用 100% */
+        to {
+          margin-left: 700px;
+        }
+      }
+
+      .box1 {
+        width: 800px;
+        height: 800px;
+        background-color: #bfa;
+      }
+
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+
+        /* box2 添加动画 */
+        animation-name: test;
+        animation-duration: 5s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

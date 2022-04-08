@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./iconfont/share/iconfont.css">
+    <style>
+    /* 
+    《iconfont使用前先确认版权问题》
+    使用iconfont步骤：
+        1.官网下载相关图标
+        2.将下载的相关文件都添加进项目
+        3.link引用该文件的 iconfont.css
+        使用方法：(index.html中提供图标的类名和编码)
+            一、使用图标类名
+                <i class="iconfont icon-qitalaji"></i>
+            
+            二、使用图标编码
+                <i class="iconfont">&#xe626;</i>
+
+            三、通过伪元素(content、font-family)
+                span::before{
+                    content: '\e622';
+                    font-family: 'iconfont';
+                    font-size: 200px;
+                }
+    
+     */
+    span::after{
+        content: '\e619';
+        font-family: 'iconfont';
+        font-size: 1rem;
+
+    }
+
+    </style>
+</head>
+<body>
+    <!-- 方法一 -->
+    <i class="iconfont icon-FillCopy"></i>
+
+    <!-- 方法二 -->
+    <i class="iconfont">&#xe605;</i>
+
+    <!-- 方法三 -->
+    <span>Hello</span>
+    
+</body>
+</html>

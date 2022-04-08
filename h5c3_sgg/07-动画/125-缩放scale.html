@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            transition: 1s;
+        }
+
+        .box1:hover{
+            /* 
+            scale()对元素进行缩放
+                scanleX(n) X轴方向放大n倍
+                scanleY(n) y轴方向放大n倍
+                scanle(n)  双方向放大n倍
+            
+            transform-origin: ; 
+                指定变形原点，默认值 center
+            transform-origin: 0 0;
+             */
+            transform: scaleX(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+
+</body>
+</html>

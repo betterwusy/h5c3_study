@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+
+        /*
+        解决父子元素相邻外边距重叠问题终极方法:
+          为父元素添加::before伪元素
+            content=''; display:table;
+          使父元素和子元素的上外边距分离
+        .box1::before{
+            content:'';
+            display: table;
+        } 
+        */
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 100px;
+        }
+
+        /* 
+        将解决高度坍塌和父子元素外边距重叠问题结合：
+            .clearfix::before,
+            .clearfix::after{
+                content: '';
+                display: table;
+                clear: both;
+            }
+            
+        这个样式可以同时解决高度塌陷和外边距重叠问题
+            当遇到这些问题时，可以直接使用
+        《CSS权威指南》
+         */
+        .clearfix::before,
+        .clearfix::after{
+            /* 解决父子相邻元素上边距重叠问题 */
+            content: '';
+            display: table;
+
+            /* 解决高度塌陷问题 */
+            clear: both;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+
+</body>
+</html>

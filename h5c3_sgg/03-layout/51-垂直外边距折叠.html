@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1,.box2{
+            width:200px;
+            height: 200px;
+            font-size: 100px;
+        }
+
+        /* 
+        垂直外边距的重叠(折叠)
+            相邻的垂直外边距会发生重叠现象
+                兄弟元素
+                    兄弟元素之间的相邻垂直外边距 
+                        - 都为正：取较大值
+                        - 都为负：取较小值
+                        - 一正一负：取和
+                    这种外边距的重叠对开发是有利的，不需要处理
+                    
+                父子元素
+                    父子元素间的相邻外边距，子元素的上外边距会传递给父元素
+                    这种折叠会影响到页面的布局，必须处理
+                    处理方法：
+                        1.给父元素加padding-top(height需减去)
+                        2.给父元素加border-top
+                            这样会影响父元素的可见框大小
+         */
+        .box1{
+            background-color: #bfa;
+            margin-bottom: 100px;
+            border-top:10px red solid;
+        }
+
+        .box2{
+            background-color: orange;
+            margin-top: 100x;
+        }
+
+        .box3{
+            width: 200px;
+            height: 100px;
+            padding-top: 100px;
+            background-color: #bfa;
+            /* border-top: 1px red solid; */
+        }
+        
+        .box4{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box1"></div>
+    <div class="box2"></div> -->
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

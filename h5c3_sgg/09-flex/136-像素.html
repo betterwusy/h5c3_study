@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!-- 
+    像素：
+        在前端开发中 像素 分成两种情况讨论: CSS像素 和 物理像素
+         - CSS像素: 编写网页时，我们所用像素都是CSS像素
+         - 浏览器在显示网页时，需要将CSS像素转换为物理像素然后再呈现
+            一个CSS像素最终由几个物理像素显示，由浏览器决定：
+                默认情况下在 PC端，一个CSS像素 = 一个物理像素
+    
+    视口(viewport)
+      - 视口就是屏幕中用来显示网页的区域
+      - 可以通过查看视口的大小，来观察CSS像素和物理像素的比值
+            (浏览器 100%，查看html的宽度)
+      - 默认情况下
+            视口宽度 1920px (CSS像素)
+                    1920px (物理像素)
+                     - 此时，css像素和物理像素的比例是1:1
+
+      - 放大两倍时
+            视口宽度  960px (CSS像素)
+                     1920px(物理像素)
+                     - 此时，CSS 像素和物理像素的比例是1:2
+                     
+      - 截图工具测量的都是物理像素
+      - 可以通过视口的大小，来改变 CSS像素 和 物理像素 的比值
+-->
+
+    <div class="box1"></div>
+</body>
+</html>

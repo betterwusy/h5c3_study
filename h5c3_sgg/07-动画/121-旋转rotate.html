@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        html{
+            perspective: 800px;
+        }
+        body{
+            background-color: rgb(241,241,241);
+            border: 1px solid red;
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 200px auto;
+            transition: 2s;
+
+        }
+
+        body:hover .box1{
+        /* 
+        <前提是html开了perspective>
+        通过旋转可以使元素沿着x y z 旋转指定的角度 
+            45deg\.25turn
+          transform: rotateY(180deg) translateZ(300px);
+          transform: translateZ(300px) rotateY(180deg);
+        
+        是否显示元素的背面
+            backface-visibility: hidden;
+        
+        */
+
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+</body>
+</html>

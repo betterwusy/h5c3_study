@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            border:10px red solid;
+
+            /* 为父元素开启BFC解决高度塌陷问题
+             overflow: hidden;   
+            但有些场景下存在一些缺点 */
+
+            /* 
+            终极方法：
+              为父元素添加::after伪元素，content='';
+                display: block; 伪元素为行内元素，需转换为块级元素
+                clear: both;
+             */
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+            float: left;
+            
+        }
+
+        .box3{
+            clear: both;
+        }
+
+        .box1::after{
+            content:'';
+            /* 伪元素为行内元素，需转化为块元素 ！！
+                使其位于放在box2下方 */
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <!-- <div class="box3"> -->
+        </div>
+    </div>
+
+</body>
+</html>

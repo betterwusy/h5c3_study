@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <table border="1" width="50%" align="center">
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+            <td>D1</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+            <td>D2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+            <td>D3</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td>B4</td>
+            <td colspan="2">C4</td>
+            <!-- <td>D4</td> -->
+        </tr>
+    </table>
+
+    <!-- 
+    在 table 中使用 tr 表示表格中的一行
+        在 tr 中使用 td 表示一个单元格
+        colspan="2" 跨越2列，横向合并2单元格
+        rowspan="2" 跨越2行，纵向合并2单元格
+        
+    长表格：
+        可将一个表格分成三个部分：
+            头部 thead  -th 表示表头部的单元格
+            主体 tbody  -tr \td
+            底部 tfoot  -tr \td
+        (可以将这三个标签打乱顺序，不影响表的总体结构)
+    -->
+    <table>
+        <thead>
+            <th>日期</th>
+            <th>收入</th>
+            <th>支出</th>
+            <th>合计</th>
+        </thead>
+        
+        <tbody>
+
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            position: absolute;
+            
+/* 
+多种定位方式中，绝对定位使用最广泛
+  相对定位一般也是配合绝对定位来使用
+
+当开启了绝对定位后：
+    水平布局：
+        left + margin-left + border-letf + padding-left + width + 
+            padding-right + border-right + margin-right + right = 包含块宽度
+        水平方向的布局就需要添加 left 和 right 两个值
+            此时规则和之前一样，只是多添加了两个值
+                当发生过度约束:
+                    如果9个值中没有auto则自动调整right值以使等式满足
+                    如果有 auto，则自动调整auto的值以使等式满足
+
+            - 可设置auto的值
+                margin-left margin-right width left right
+            - 因为left和right 的默认值是auto， 所以如果不指定left 和 right
+                则等式不满足时，会自动调整这两个值
+
+        开启了绝对定位，实现水平居中：
+            left:0;  right:0; 
+            margin-left:auto;   margin-right:auto;
+    
+
+    垂直方向布局的等式也必须要满足
+        top + margin-top/bottom + padding-top/bottom + 
+            border-top/bottom + height + bottom = 包含块height
+    
+        开启了绝对定位，实现垂直居中：
+            top:0;  bottom:0; 
+            margin-top:auto;    margin-bottom:auto;
+    
+    开启了绝对定位 实现在父元素中水平、垂直居中：
+        top:0; botto:0; left:0; right:0; margin:auto;
+    */ 
+            margin-left: auto; margin-right: auto;
+            left:0;right:0;
+
+            top: 0; bottom: 0; 
+            margin-top: auto; margin-bottom: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+
+</body>
+</html>

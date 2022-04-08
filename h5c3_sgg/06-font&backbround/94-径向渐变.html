@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: #bfa;
+
+        /* 
+        
+        radial-gradient() 径向渐变(放射性的效果)
+            background-image:radial-gradient(red,yellow);
+        
+            - 默认情况下径向渐变的形状根据元素的形状来计算的
+                正方形 -->  圆形
+                长方形 -->  椭圆形
+            
+            - 也可以手动指定径向渐变的大小
+            background-image:radial-gradient(100px 100px,red,yellow);
+            background-image:radial-gradient(circle/ellipse,red,yellow);
+                circle 正圆 、ellipse 椭圆
+            
+            - 也可以指定渐变的位置
+                background-image:radial-gradient(100px 100px at 100px 100px,red,yellow);
+                    cloest-side\farthest-side\cloest-corner\farthest-corner  渐变效果到近边\远边\近角\远角
+
+            - 语法：
+                radial-gradient(大小 at 位置，颜色 位置，颜色 位置，颜色 位置);
+                大小: npx npx\circle\ellipse\cloest-side\farthest-side\cloest-corner\farthest-corner
+                位置：top\bottom\left\right\npx npx
+
+        repeating-radial-gradient()  重复径向渐变
+
+        */ 
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+</body>
+</html>

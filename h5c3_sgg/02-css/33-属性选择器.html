@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+/* 
+        属性选择器:根据属性选择元素
+            [属性名]        选中所有含有指定属性的元素
+            [属性名=属性值]  选中所有含有指定属性和属性值的元素
+            [属性名^=属性值] 选中所有属性值以指定属性值开头的元素
+            [属性名$=属性值] 选中所有属性值以指定属性值结尾的元素
+            [属性名*=属性值] 选中所有属性值中含有某值的元素
+
+        例子:
+            p[title]    p标签且属性名是title
+            p[title="abc"]  p标签且属性名是title，属性值为abc
+            p[title^="abc"] p标签且属性名是title，属性值开头为abc
+            p[title$="def"] p标签且属性名是title，属性值结尾为def
+            p[title*=bc]    p标签且属性名是title，属性值包含bc
+*/
+    </style>
+</head>
+
+<body>
+    <p title="abc">段落一</p>
+    <p title="abcdef">段落二</p>
+    <p title="hello">段落三</p>
+    <p>段落四</p>
+    <p>段落五</p>
+    <p>段落六</p>
+
+
+</body>
+
+</html>

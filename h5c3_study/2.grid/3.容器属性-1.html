@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>容器属性</title>
+</head>
+
+<body>
+<!--
+grid 布局的属性分成两类:
+  - 一类定义在容器上面，称为容器属性；
+  - 另一类定义在项目上面，称为项目属性。
+  这部分先介绍容器属性。
+
+  display: grid => 指定一个容器采用网格布局
+    - 默认情况下，容器元素都是块级元素，但也可以设成行内元素
+      display: inline-grid
+    - 注意:设为网格布局以后，容器子元素（项目）的float, display: inline-block、 table-cell, vertical-align和column-*等设置都将失效。
+
+  grid-template-rows、grid-template-columns
+    - 容器指定了网格布局后，接着就要划分行和列。
+    - grid-template-rows    属性定义每一行的高度
+    - grid-template-columns 属性定义每一列的宽度,
+    如:
+      #container {
+        display: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px;
+      }
+    - 除了使用绝对单位，也可以使用百分比(按容器宽、高为基础)
+      #container {
+        display: grid;
+        grid-template-rows: 33.33% 33.33% 33.33%;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+      }
+
+  grid-template-columns/rows 属性值的函数和关键字:
+  1) repeat() 函数
+    - repeat(n, value) 指定重复 n 次, 值为 value
+    如: grid-template-columns: repeat(3, 100px);
+        grid-template-columns: repeat(2, 100px 200px 300px)
+     => grid-template-columns: 100px 200px 300px 100px 200px 300px;
+  2) auto-fill 关键字
+    - 有时，单元格的大小是固定的，但是容器的大小不确定。
+      如果希望每一行（或每一列）容纳尽可能多的单元格，
+      这时可以使用auto-fill关键字表示自动填充。
+    如: grid-template-columns: repeat(auto-fill, 100px);
+      表示 每列宽度100px, 自动填充尽可能多的列
+  3) fr 关键字
+    - 为了方便表示比例关系，网格布局提供了fr关键字
+      （fraction 的缩写，意为"片段"）。
+    - 如果两列的宽度分别为1fr和2fr，就表示后者是前者的两倍
+      如：grid-template-columns: 1fr 2fr;
+       表示 若容器宽度为300px, 则第一列100px、第二列200px
+    - fr 还可以与绝对单位配合使用:
+      如：grid-template-columns: 100px 1fr 2fr;
+  4) minmax() 函数
+    - minmax() 函数产生一个长度范围，表示长度就在这个范围之中。
+      它接受两个参数，分别为最小值和最大值。
+    如: grid-template-columns: 1fr 1fr minmax(100px, 1fr);
+      表示有3列, 第3列宽度不小于100px，不大于1fr
+  5) auto 关键字
+    - auto 关键字表示由浏览器自己决定长度
+    如: grid-template-columns: 100px auto 100px;
+      上面代码,第二列的宽度,基本上等于该列单元格的最大宽度
+  6) 网格线的名称
+    - grid-template-columns\rows 属性里,还可以用[]括号指定每一根网格线的名称, 方便以后引用
+    如: grid-template-columns: [c1] 100px [c2] 200px [c3] 300px [c4];
+        grid-template-rows:    [r1] 100px [r2] 200px [r3] 300px [r4];
+      指定了3行3列，有4根垂直网格线,4根水平网格线
+    - 同一网格线还可指定多个名字: [column-5 fifth-column]
+    - 另一种定义网格线的方法: 使用 grid-template-areas 属性为单元格命名后, 网格线自动为 单元格-start、单元格-end
+  7) 布局实例
+    两栏式布局:
+      {
+        display: grid;
+        grid-template-columns: 70% 30%;
+      }
+    十二栏式布局:
+      {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+-->
+  <div id="container">
+    <div id="item1" class="item">1</div>
+    <div id="item2" class="item">2</div>
+    <div id="item3" class="item">3</div>
+    <div id="item4" class="item">4</div>
+    <div id="item5" class="item">5</div>
+    <div id="item6" class="item">6</div>
+    <div id="item7" class="item">7</div>
+    <div id="item8" class="item">8</div>
+    <div id="item9" class="item">9</div>
+  </div>
+</body>
+
+</html>
+<style>
+  /* demo */
+  #container {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+  }
+
+  .item {
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #item1 {
+    background: #EF3429;
+  }
+
+  #item2 {
+    background: #F68F25;
+  }
+
+  #item3 {
+    background: #4BA846;
+  }
+
+  #item4 {
+    background: #0476C2;
+  }
+
+  #item5 {
+    background: #C077AF;
+  }
+
+  #item6 {
+    background: #F8D29D;
+  }
+
+  #item7 {
+    background: #B4A87F;
+  }
+
+  #item8 {
+    background: #D0E4A8;
+  }
+
+  #item9 {
+    background: #4DC7EC;
+  }
+</style>

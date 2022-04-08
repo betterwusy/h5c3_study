@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: #bfa;
+
+    /* 
+    
+    边框(border),属于盒子的边缘，边框属于盒子内部
+        边框大小会影响整个盒子的大小 ！
+    设置边框需要至少设置三个样式：
+        边框宽度 border-width
+        边框颜色 border-color
+        边框样式 border-style
+
+    border-width
+        - 可省略，有默认值，3px
+        - 四个值：上 右 下 左
+        - 三个值：上 左右 下
+        - 两个值：上下 左右
+        - 一个值：上下左右
+        border-top/right/bottom/left-width：n px;
+    
+    border-color
+        规则和border-width一样
+            border-color: orange red green;
+            border-top-color: yellow;
+        也可以省略不写，默认值为color(前景色)的值
+    
+    border-style
+        指定边框的样式
+            none  默认值
+            solid 实线
+            double 双线
+            dashed 虚线
+            dotted 点状虚线
+            
+    border的简写属性
+        通过该属性可以同时设置边框的所有相关样式，没有顺序要求
+        border: 10px orange solid;
+        border-top/right/bottom/left:    ;
+
+    */
+
+        border-width: 10px; 
+        border-color: red;
+        border-style: solid;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+</body>
+</html>

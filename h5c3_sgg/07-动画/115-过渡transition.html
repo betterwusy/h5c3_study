@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: silver;    
+            overflow: hidden;    
+        }
+
+        .box1 div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        
+        .box2{
+            background-color: #bfa;
+            transition: all 2s;
+    /* 
+    《过渡(transition)》
+    transition-property\duration\timing-function\delay
+    
+        通过过渡可指定一个属性发生变化时的切换方式
+            可以创建一些非常好的效果，提升用户的体验
+
+        - transition-property    指定要执行过渡的属性
+            多个属性间使用,隔开，所有属性都要则使用 all
+            大部分属性都支持过滤效果(能计算的都可以)
+            注意过滤必须是从一个有效数值向另一个有效数值进行过渡
+          transition-property: padding-left;
+          transition-property: height,width;
+          transition-property: all;
+
+        - transition-duration   指定过滤效果的持续时间
+          transition-duration: 2s;
+          transition-duration: 2s,1s;
+
+        - transition-timing-function   过渡效果的时序函数
+            可选值:
+                - ease 默认值，慢速开始，先加速，再减速
+                - linear   匀速运动
+                - ease-in  加速运动
+                - ease-out 减速运动
+                - ease-in-out 先加速，后减速
+                - cubic-bezier() 贝塞尔曲线指定时序
+                - steps() 分步执行过渡效果
+          transition-timing-function: steps(2, end);
+
+        - transition-delay  过渡效果的延迟时间
+    
+    transition 同时设置过渡相关的所有属性
+        若写延迟时间，则需先写持续时间再写延迟时间！
+        transition: all 2s 1s ease-in ;
+    */
+        }
+
+        .box1:hover .box2{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+
+</body>
+</html>

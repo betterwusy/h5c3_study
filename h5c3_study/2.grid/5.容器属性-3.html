@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<!--
+grid-template-areas 属性用来定义区域
+  网格布局允许指定"区域"(area),一个区域由单个或多个单元格组成。
+   - 如:
+      {
+        diplay: grid;
+        grid-template-rows: 100px 100px 100px;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-areas: 'a b c' 'd e f' 'g h i';
+      }
+      // 需配合项目属性 grid-area: <areaName>; 来使用
+   - 也可将多个单元格合并成一个区域:
+      grid-template-areas: 'header header header' 'main main main' 'footer footer footer';
+   - 如果有些区域不需利用(懒得命名), 则使用"点"(.)来表示:
+      grid-template-areas: 'a . c' 'd . f' 'g . i';
+
+    注意，区域的命名会影响到网格线。每个区域的起始网格线，会自动命名为 区域名-start，终止网格线自动命名为 区域名-end。
+    比如，区域名为header，则起始位置的水平网格线和垂直网格线叫做header-start，终止位置的水平网格线和垂直网格线叫做header-end。
+    另外, 网格线除了可以用单元格名称来命名, 仍然可以用数字来表示第几根线。
+
+grid-auto-flow:
+  划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。
+    默认的放置顺序是"先行后列"，即先填满第一行，再开始放入第二行。
+  这个顺序由: grid-auto-flow 属性来决定
+    默认值是row,即"先行后列"。可修改为column,即"先列后行"
+  属性值除了为 row/column 之外, 还可为 row dense, column dense
+    这两个属性用于设置某些项目指定位置以后，剩下的项目怎么自动放置
+
+justify-items、align-items、place-items:
+  justify-items 属性用于设置单元格内容的水平位置
+  align-items   属性用于设置单元格内容的垂直位置
+    这两个属性值都可以取以下值:
+      start: 对齐单元格的起始边缘
+      end: 对齐单元格的结束边缘
+      center: 单元格内部居中
+      stretch: 拉伸,占满单元格的整个宽度(默认值)
+  place-items 属性是align-items和justify-items属性的简写形式
+    place-items: <align-items> <justify-items>;
+    - 若忽略第一个值，则浏览器认为与第一个值相等
+
+justify-content、align-content、place-content:
+  justify-content 属性是整个内容区域在容器里面的水平位置
+  align-content 属性是整个内容区在容器里面的垂直位置
+    这两个属性都可以取以下值:
+      start:  |||----
+      end:    ----|||
+      center: --|||--
+      stretch:
+      space-between  |--|--|
+      space-around   -|--|--|-
+      space-evenly   -|-|-|-
+  place-content 属性是 justify-content 和 align-content 属性的简写形式:
+    place-content: <align-content> <justify-content>
+    - 若忽略第一个值，则浏览器认为与第一个值相等
+
+grid-auto-columns、grid-auto-rows
+  grid-auto-columns属性和grid-auto-rows属性用来设置，浏览器自动创建的多余网格的列宽和行高。
+  它们的写法与grid-template-columns和grid-template-rows完全相同。
+  如果不指定这两个属性，浏览器完全根据单元格内容的大小，决定新增网格的列宽和行高。
+  如: grid-auto-rows: 50px;
+
+grid-template、grid:
+  grid-template 是 grid-template-columns、grid-template-rows、grid-template-areas 三个属性的合并简写形式
+  grid 是 grid-template-columns、grid-template-rows、grid-template-areas、
+      grid-auto-columns、grid-auto-rows、grid-auto-flow 这六个属性的合并简写形式
+  从易读易写的角度考虑，还是建议不要合并属性，所以这里就不详细介绍这两个属性了。
+-->
+</body>
+
+</html>

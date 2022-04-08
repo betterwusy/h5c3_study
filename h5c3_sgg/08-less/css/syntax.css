@@ -1,0 +1,98 @@
+/*
+less中的语法：
+    1.less文件无法被html文件直接引用，只能先编译成css再被引用
+    2.css 中的注释，内容会被解析到 css文件中
+    3.变量：在变量中可以存储一个任意的值
+      语法: 
+        @a:120 px;
+        @b: #ff6700;
+        @c:box6;
+        @d:"../img";
+        .@{c}{
+            width:@a;
+            background-color:@b;
+            background-image:url("@{d}/1.jpg");
+        }
+
+        height: 300px;
+        width: $height;
+
+      - 使用变量时，如果直接使用，以"@变量名"形式使用;
+          若作为类名/一部分值使用，则"@{变量名}"形式使用
+      - 变量发生重名时，优先使用较近的，可在声明前就使用变量
+        
+    4.父类选择器
+    .box1{
+        .box2{
+            color:red;
+        }
+
+        相当于选中.box1 > .box3
+        > .box3{
+            color:blue;
+        }
+
+        选中父类,即等于box1:hover
+        &:hover{
+        
+        }
+    }
+
+    5.继承
+        :extend() 对当前选择器拓展指定选择器的样式(选择器分组)
+    .p1{
+        height:200px;
+        width:200px;
+    }
+    .p2:extend(.p1){
+        color:red;
+    }
+
+    直接对指定样式进行引用，相当于复制  
+    .p3{
+        .p1();
+    }
+
+
+*/
+.box1 {
+  background-color: #bfa;
+  width: 100px;
+}
+.box1 .box2 {
+  color: orange;
+  height: 300px;
+  width: 300px;
+}
+.box1 .box3 {
+  font-style: 18px;
+}
+.box1 .box3 .box4 {
+  border: 1px solid red;
+}
+.box1 .box2 {
+  color: red;
+}
+.box1 > .box3 {
+  color: blue;
+}
+.box1:hover {
+  color: orange;
+}
+.p1,
+.p2 {
+  height: 200px;
+  width: 200px;
+}
+.p2 {
+  color: red;
+}
+.p3 {
+  height: 200px;
+  width: 200px;
+}
+.p5 {
+  width: 100px;
+  height: 100px;
+  background-color: #bfa;
+}
